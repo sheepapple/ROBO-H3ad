@@ -2,7 +2,7 @@
 
 A real-time voice activity monitoring Discord bot with custom activity display featuring live volume gauges and low-latency updates.
 
-![ROBO H3ad Bot Profile](./assets/bot-profile.png)
+![ROBO H3ad Bot Profile](./public/external/bot-profile.png)
 
 ## Overview
 
@@ -18,11 +18,11 @@ ROBO_H3ad is a Discord bot that processes voice channel data in real-time and di
 ## Demo
 
 ### Bot Activity in Action
-![Bot Activity Demo](./assets/activity-demo.gif)
+![Bot Activity Demo](./public/external/activity-demo.gif)
 *Live volume gauge responding to voice channel activity*
 
 ### Terminal Output
-![Terminal Demo](./assets/terminal-demo.gif)
+![Terminal Demo](./public/external/terminal-demo.gif)
 *Real-time logging and data processing*
 
 ## Tech Stack
@@ -35,7 +35,7 @@ ROBO_H3ad is a Discord bot that processes voice channel data in real-time and di
 ## Screenshots
 
 ### Code Architecture
-![Code Structure](./assets/code-structure.png)
+![Code Structure](./public/external/code-structure.png)
 *WebSocket handler and voice data processing logic*
 
 ## Getting Started
@@ -72,7 +72,7 @@ cp .env.example .env
 python bot.py
 ```
 
-## 📋 Configuration
+## Configuration
 
 Create a `.env` file with the following variables:
 ```env
@@ -83,16 +83,17 @@ ACTIVITY_UPDATE_INTERVAL=100
 
 ## Architecture
 ```
-├── bot.py                 # Main bot entry point
-├── handlers/
-│   ├── voice_handler.py   # Voice channel monitoring
-│   └── websocket.py       # WebSocket connection management
-├── activity/
-│   ├── index.html         # Custom activity frontend
-│   ├── styles.css         # Activity styling
-│   └── script.js          # Volume gauge logic
-└── utils/
-    └── audio_processor.py # Real-time audio data processing
+├── server.js            # Main server
+├── events/
+│   ├── voicevolume.js        #Real-time audio data
+│   └── interactionCreate.py   # WebSocket connection 
+├── commands/utility/
+│   ├── joinvs.js   # Joins Voice channel
+│   ├── ...         # Assorted Commands
+│   └── startvolumeactivity.py  # WebSocket activity
+└── activity/
+    ├── index.html         # Custom activity frontend
+    └── index.css         # Activity styling
 ```
 
 ## How It Works
