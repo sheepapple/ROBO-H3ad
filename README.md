@@ -55,13 +55,13 @@ Node.js (for frontend development)
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/robo-h3ad.git
+git clone https://github.com/sheepapple/robo-h3ad.git
 cd robo-h3ad
 ```
 
 2. Install dependencies
 ```bash
-pip install -r requirements.txt
+pip install dependencies
 npm install
 ```
 
