@@ -38,10 +38,6 @@ ROBO_H3ad is a Discord bot that processes voice channel data in real-time and di
 ![Code Structure](./assets/code-structure.png)
 *WebSocket handler and voice data processing logic*
 
-### Bot Interface
-![Discord Interface](./assets/discord-interface.png)
-*Bot activity displaying in Discord client*
-
 ## Getting Started
 
 ### Prerequisites
